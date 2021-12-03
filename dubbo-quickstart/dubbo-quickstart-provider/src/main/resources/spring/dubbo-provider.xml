@@ -9,9 +9,7 @@
 
     <!-- 提供方应用信息，用于计算依赖关系 -->
     <dubbo:application name="dubbo-quickstart-provider">
-        <dubbo:parameter key="qos.enable" value="true"/>
-        <dubbo:parameter key="qos.accept.foreign.ip" value="false"/>
-        <dubbo:parameter key="qos.port" value="22222"/>
+        <dubbo:parameter key="unicast" value="false" />
     </dubbo:application>
 
     <!-- 使用 multicast 广播注册中心暴露服务地址 -->

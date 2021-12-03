@@ -9,13 +9,11 @@
 
     <!-- 消费方应用信息，用于计算依赖关系 -->
     <dubbo:application name="dubbo-quickstart-consumer">
-        <dubbo:parameter key="qos.enable" value="true"/>
-        <dubbo:parameter key="qos.accept.foreign.ip" value="false"/>
-        <dubbo:parameter key="qos.port" value="33333"/>
+        <dubbo:parameter key="unicast" value="false" />
     </dubbo:application>
 
     <!-- 使用 multicast 广播注册中心暴露服务地址 -->
-    <dubbo:registry address="multicast://224.5.6.7:1234?unicast=false"/>
+    <dubbo:registry address="multicast://224.5.6.7:1234"/>
 
     <!-- 生成远程服务代理，可以和本地 bean 一样使用 helloService -->
     <dubbo:reference id="helloService" interface="com.huey.learning.dubbo.quickstart.HelloService"/>
