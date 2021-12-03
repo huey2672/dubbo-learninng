@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:dubbo="http://code.alibabatech.com/schema/dubbo"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+    http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd
+    http://code.alibabatech.com/schema/dubbo http://code.alibabatech.com/schema/dubbo/dubbo.xsd">
+
+    <context:property-placeholder location="classpath:dubbo.properties"/>
+
+    <dubbo:application name="${dubbo.application.name}"/>
+
+    <dubbo:registry address="${dubbo.registry.address}"/>
+
+    <dubbo:protocol name="${dubbo.protocol.name}" port="${dubbo.protocol.port}"/>
+
+
+    <bean id="chineseHelloService" class="com.huey.learning.dubbo.sample.servicegroup.ChineseHelloService"/>
+    <dubbo:service group="chinese" interface="com.huey.learning.dubbo.sample.servicegroup.HelloService" ref="chineseHelloService"/>
+
+    <bean id="englishHelloService" class="com.huey.learning.dubbo.sample.servicegroup.EnglishHelloService"/>
+    <dubbo:service group="english" interface="com.huey.learning.dubbo.sample.servicegroup.HelloService" ref="englishHelloService"/>
+
+</beans>
