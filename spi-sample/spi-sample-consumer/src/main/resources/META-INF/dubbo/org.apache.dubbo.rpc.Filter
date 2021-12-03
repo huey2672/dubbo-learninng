@@ -1,0 +1,1 @@
+myConsumerFilter=com.huey.learning.dubbo.sample.spi.filter.MyConsumerFilter
