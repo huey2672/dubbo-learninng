@@ -8,7 +8,7 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
  */
 public class ZkSampleConsumerApp {
 
-    public static void main(String[] args) throws Exception {
+    public static void main(String[] args) {
         AbstractApplicationContext context = new ClassPathXmlApplicationContext("spring/dubbo-consumer.xml");
         HelloService helloService = context.getBean(HelloService.class);
         System.out.println(helloService.sayHello("World"));
