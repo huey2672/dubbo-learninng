@@ -9,7 +9,7 @@
     <context:property-placeholder location="classpath:dubbo.properties" />
 
     <dubbo:application name="${dubbo.application.name}" />
-    <dubbo:registry protocol="${dubbo.registry.protocol}" address="${dubbo.registry.address}" />
+    <dubbo:registry address="${dubbo.registry.address}" />
 
     <dubbo:reference id="helloService" interface="com.huey.learning.dubbo.sample.zk.HelloService" />
 
