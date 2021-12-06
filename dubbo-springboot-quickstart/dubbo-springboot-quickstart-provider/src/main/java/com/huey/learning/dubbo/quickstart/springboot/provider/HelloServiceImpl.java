@@ -1,9 +1,9 @@
 package com.huey.learning.dubbo.quickstart.springboot.provider;
 
 import com.huey.learning.dubbo.quickstart.springboot.HelloService;
-import org.apache.dubbo.config.annotation.Service;
+import org.apache.dubbo.config.annotation.DubboService;
 
-@Service
+@DubboService
 public class HelloServiceImpl implements HelloService {
 
     @Override
