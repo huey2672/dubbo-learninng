@@ -1,11 +1,12 @@
 package com.huey.learning.dubbo.sample.annotation;
 
+import org.apache.dubbo.config.annotation.DubboService;
 import org.apache.dubbo.config.annotation.Service;
 
 /**
  * @author huey
  */
-@Service
+@DubboService
 public class HelloServiceImpl implements HelloService {
 
     @Override

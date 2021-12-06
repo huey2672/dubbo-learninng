@@ -6,7 +6,7 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.PropertySource;
 
 @Configuration
-@EnableDubbo(scanBasePackages = "org.apache.dubbo.demo.action")
+@EnableDubbo(scanBasePackages = "com.huey.learning.dubbo.sample.annotation")
 @PropertySource("classpath:/dubbo.properties")
 @ComponentScan(value = {"com.huey.learning.dubbo.sample.annotation"})
 public class DubboConsumerConfiguration {
