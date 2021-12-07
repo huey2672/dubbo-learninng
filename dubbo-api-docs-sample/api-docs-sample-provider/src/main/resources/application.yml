@@ -1,0 +1,22 @@
+server:
+  port: 8081
+
+spring:
+  profiles:
+    active: dev
+
+dubbo:
+  application:
+    name: api-docs-sample-provider
+  registry:
+    address: zookeeper://127.0.0.1:2181
+  config-center:
+    address: zookeeper://127.0.0.1:2181
+  metadata-report:
+    address: zookeeper://127.0.0.1:2181
+  protocol:
+    name: dubbo
+    port: 20880
+  scan:
+    base-packages: com.huey.learning.dubbo.sample.apidocs.provider
+
